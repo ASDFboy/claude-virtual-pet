@@ -1,5 +1,5 @@
 /* Claude Pet - a tiny pixel-art desktop pet for Windows.
- * Authors: Jeffrey Landgrave, Claude (Anthropic)
+ * Authors: ASDFboy, Claude (Anthropic)
  * License: MIT (see LICENSE)
  *
  *   ClaudePet.exe                 run the pet (single instance)

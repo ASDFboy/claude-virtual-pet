@@ -1,5 +1,5 @@
 /* Linux preview: dumps N frames of a state as raw ARGB to stdout.
- * Authors: Jeffrey Landgrave, Claude (Anthropic). License: MIT. */
+ * Authors: ASDFboy, Claude (Anthropic). License: MIT. */
 #include <stdio.h>
 #include <stdlib.h>
 #include "../src/pet_draw.h"

@@ -1,13 +1,13 @@
 {
   "name": "pixel-pet",
-  "owner": { "name": "Jeffrey Landgrave" },
+  "owner": { "name": "ASDFboy" },
   "description": "Pixel-art desktop pet for Claude",
   "plugins": [
     {
       "name": "pixel-pet",
       "source": "./plugin",
       "description": "A pixel-art desktop pet that lives on your taskbar and acts out what Claude is doing (Windows).",
-      "author": { "name": "Jeffrey Landgrave (ASDFboy) and Claude (Anthropic)" },
+      "author": { "name": "ASDFboy and Claude (Anthropic)" },
       "license": "MIT"
     }
   ]
