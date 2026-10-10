@@ -7,7 +7,7 @@
       "name": "pixel-pet",
       "source": "./plugin",
       "description": "A pixel-art desktop pet that lives on your taskbar and acts out what Claude is doing (Windows).",
-      "author": { "name": "Jeffrey Landgrave" },
+      "author": { "name": "Jeffrey Landgrave (ASDFboy) and Claude (Anthropic)" },
       "license": "MIT"
     }
   ]

@@ -2,7 +2,7 @@
   "name": "pixel-pet",
   "version": "1.0.0",
   "description": "A pixel-art desktop pet that lives on your taskbar and acts out what Claude is doing (Windows).",
-  "author": { "name": "Jeffrey Landgrave" },
+  "author": { "name": "Jeffrey Landgrave (ASDFboy) and Claude (Anthropic)" },
   "homepage": "https://github.com/ASDFboy/claude-virtual-pet",
   "repository": "https://github.com/ASDFboy/claude-virtual-pet",
   "license": "MIT",
