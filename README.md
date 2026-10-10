@@ -114,7 +114,7 @@ Adding an animation is one `case` in `src/pet_draw.h` (plus a name in `ST_NAMES`
 
 ## Credits
 
-Created by **Jeffrey Landgrave** ([@ASDFboy](https://github.com/ASDFboy)) and **Claude** (Anthropic), who wrote the code and art together.
+Created by **Jeffrey Landgrave** (ASDFboy, [@ASDFboy](https://github.com/ASDFboy)) and **Claude** (Anthropic), who wrote the code and art together.
 
 ## License
 
