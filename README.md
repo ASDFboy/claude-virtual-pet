@@ -4,22 +4,22 @@ A tiny pixel-art Claude that lives on your Windows desktop. It wanders around, c
 
 ![Every animation](docs/preview.gif)
 
-- **Small and light.** A single ~130 KB native Windows program: no installer, no runtime, no framework. It animates only while visible, and while hidden it just checks about once a second whether the Claude window is open.
-- **Shows up when Claude does.** It appears whenever the Claude window is open and not minimized, and hides when it's minimized or closed.
-- **Doesn't touch your stuff.** It never clicks, types into, or changes other windows. It only reads where windows are (so it can stand on them), whether the Claude window is open, and where your cursor is (so it can look at it).
+- **Small and light.** A single ~130 KB native Windows program: no installer, no runtime, no framework. It animates only while visible, and while hidden it just checks about once a second whether the Claude desktop app is open.
+- **Shows up when Claude does.** It appears whenever the **Claude desktop app** window is open and not minimized, and hides when it's minimized or closed. (If you only use Claude Code in a terminal or claude.ai in a browser, there's no Claude window to watch: turn on *Show even when Claude is minimized* in its right-click menu, or run it with `--always`.)
+- **Doesn't touch your stuff.** It never clicks, types into, or changes other windows. It only reads where windows are (so it can stand on them), whether the Claude desktop app window is open, and where your cursor is (so it can look at it).
 - **Optional Claude Code plugin** for exact, instant reactions to every tool Claude uses.
 
 ## Install
 
-**Windows 10/11, 64-bit.**
+**Windows, 64-bit.** (Tested on Windows 11.)
 
-1. Download `ClaudePet.exe` from the [latest release](../../releases/latest), or grab it from [`plugin/bin/`](plugin/bin/ClaudePet.exe) in this repo.
-2. Put it somewhere permanent (for example `C:\Users\<you>\Apps\ClaudePet\`) and double-click it. It starts in the system tray and appears whenever the Claude window is open.
+1. Download [`ClaudePet.exe`](plugin/bin/ClaudePet.exe) from this repo (open it and use the download button), or clone the repo and build it yourself.
+2. Put it somewhere permanent (for example `C:\Users\<you>\Apps\ClaudePet\`) and double-click it. It starts in the system tray and appears whenever the Claude desktop app window is open.
 3. Right-click the pet (or its tray icon) and turn on **Start with Windows** so it's always around.
 
 > **SmartScreen:** because the exe is small, unsigned and new, Windows may show "Windows protected your PC". Click **More info → Run anyway**, or build it yourself from source (below) if you'd rather not trust a binary.
 
-To update, just launch the new exe: a plain launch replaces the running pet.
+**Updating:** quit the pet first (right-click → Quit), because Windows won't let you overwrite a running exe, then replace the file and launch it again. If you save the new exe under a different name or folder instead, just launching it takes over from the running pet.
 
 ### Optional: Claude Code plugin
 
@@ -64,7 +64,7 @@ On its own it idles, looks at your cursor, walks around, sits, hops, dances when
 
 ```
 ClaudePet.exe                  run the pet (replaces a running one)
-ClaudePet.exe --always         stay visible even when there's no Claude window
+ClaudePet.exe --always         stay visible even when there's no Claude desktop app window
 ClaudePet.exe --event think    play an animation by hand
 ClaudePet.exe --quit           close a running pet
 ClaudePet.exe --hook           (used by the plugin) read a Claude Code hook event on stdin
@@ -91,7 +91,7 @@ pip install ziglang
 ./build.sh
 ```
 
-GitHub Actions builds the exe on every push and attaches it, with a SHA-256 checksum, to releases made from `v*` tags.
+A GitHub Actions workflow (`.github/workflows/build.yml`) is included. It builds the exe the same way as `build.sh` on every push, and for `v*` tags it attaches the exe and a SHA-256 checksum to the release.
 
 ## Project layout
 
@@ -108,7 +108,7 @@ Adding an animation is one `case` in `src/pet_draw.h` (plus a name in `ST_NAMES`
 
 ## Troubleshooting
 
-- **I don't see the pet.** It only shows while the Claude window is open and not minimized. Check the tray for its icon, or right-click it and enable *Show even when Claude is minimized*, or run `ClaudePet.exe --always`.
+- **I don't see the pet.** It only shows while the Claude desktop app window is open and not minimized. Check the tray for its icon, or right-click it and enable *Show even when Claude is minimized*, or run `ClaudePet.exe --always`.
 - **It reacts but with a delay or only "thinking".** Without the plugin it can only guess from CPU use. Install the Claude Code plugin for exact reactions.
 - **The plugin does nothing.** Make sure `plugin/bin/ClaudePet.exe` exists in the installed plugin and restart the Claude Code session after installing.
 
