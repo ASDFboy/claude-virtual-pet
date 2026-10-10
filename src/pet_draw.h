@@ -1,7 +1,7 @@
 /* pet_draw.h - procedural pixel-art renderer for the Claude pet.
  * Pure C, no OS dependencies: draws one frame into a CW x CH ARGB canvas.
  * Shared by the Windows app and the Linux preview tool.
- * Authors: Jeffrey Landgrave, Claude (Anthropic)
+ * Authors: ASDFboy, Claude (Anthropic)
  * License: MIT (see LICENSE) */
 #ifndef PET_DRAW_H
 #define PET_DRAW_H
